@@ -18,8 +18,8 @@ def test_basic_navigation(page: Page):
     with allure.step("Assert"):
       assert page.title() == 'Example Domain'
     
-    # Take a screenshot for Allure report
-    page.screenshot(path='example.png')
+    with allure.step("Capture Screenshot"):
+      page.screenshot(path='example.png')
 
 def test_simple_assertion():
     # A simple test to verify pytest is working
